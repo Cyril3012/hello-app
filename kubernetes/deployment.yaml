@@ -6,6 +6,9 @@ spec:
   replicas: 1
   strategy:
     type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0          # DO NOT CREATE EXTRA POD
+      maxUnavailable: 1    # DELETE OLD POD FIRST since pod limit reaches max
   selector:
     matchLabels:
       app: hello
