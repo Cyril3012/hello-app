@@ -1,0 +1,13 @@
+name: CI-CD to EKS (Static Config)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test workflow
+        run: echo "GitHub Actions trigger works"
