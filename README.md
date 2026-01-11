@@ -88,6 +88,28 @@ kubectl scale deployment coredns -n kube-system --replicas=1
 
 ```
 
+## Helm
+Deploy Using Helm
+```
+helm install hello-app ./helm/hello-app
+helm upgrade hello-app ./helm/hello-app
+helm list
+kubectl get pods
+kubectl get svc
+```
+Helm Versioning
+```
+helm history hello-app
+```
+Helm Rollback
+```
+helm rollback hello-app 1
+```
+Verify rollback:
+```
+kubectl rollout status deployment hello-app
+```
+
 ## CI/CD Pipeline (GitHub Actions)
 
 - The pipeline runs automatically on push to the master branch and performs:
