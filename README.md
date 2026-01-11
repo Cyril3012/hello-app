@@ -1,4 +1,5 @@
 # Hello App – Automated Deployment on AWS EKS
+Refrence Document: https://docs.google.com/document/d/138HAIRWifXOGWm_M_TJyn18DZ0f9UpMo/edit?usp=sharing&ouid=116786453322772063653&rtpof=true&sd=true
 ## Overview
 
 This project demonstrates **an end-to-end DevOps** workflow to automatically build, containerize, and deploy a simple **Hello World web application on AWS EKS** using **Terraform, Docker, Kubernetes, and GitHub Actions.**
