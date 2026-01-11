@@ -1,0 +1,28 @@
+replicaCount: 1
+
+image:
+  repository: chandrucyril/hello-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000
+  nodePort: 30080
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+
+env:
+  APP_ENV: production
+  APP_NAME: hello-app
+
+rollingUpdate:
+  maxSurge: 0
+  maxUnavailable: 1
